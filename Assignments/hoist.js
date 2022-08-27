@@ -1,6 +1,10 @@
 // #1
 console.log(hello);
 var hello = 'world';
+//var hello
+//console.log(hello)
+//hello='world'
+//output: undefined
 
 // #2
 var needle = 'haystack';
@@ -9,6 +13,15 @@ function test() {
     var needle = 'magnet';
     console.log(needle);
 }
+//var needle = 'haystack'
+//function test() {
+//     var needle = 'magnet';
+//     console.log(needle);
+// }
+//test();
+//var needle = 'magnet';
+//     console.log(needle);
+//output: magnet
 
 // #3
 var brendan = 'super cool';
@@ -17,6 +30,7 @@ function print() {
     console.log(brendan);
 }
 console.log(brendan);
+//output: super cool
 
 // #4
 var food = 'chicken';
@@ -27,10 +41,11 @@ function eat() {
     console.log(food);
     var food = 'gone';
 }
-
+//output: chicken
+//output: half-chicken
 
 // #5
-mean();
+// mean();
 console.log(food);
 var mean = function () {
     food = "chicken";
@@ -39,6 +54,7 @@ var mean = function () {
     console.log(food);
 }
 console.log(food);
+//output: error, b/c var mean gets hoisted as undefined, and then mean() is tried to be invoked
 
 
 
@@ -53,7 +69,7 @@ function rewind() {
     console.log(genre);
 }
 console.log(genre);
-
+//undefined, rock, r&b, r&b     <-wrong, last will be disco!?!?!?! 
 
 
 // #7
@@ -67,6 +83,8 @@ function learn() {
     console.log(dojo);
 }
 console.log(dojo);
+//error ? no declaration < --- wrong , san jose, seattle, burbank, san jose
+
 
 
 // #8
@@ -84,3 +102,4 @@ function makeDojo(name, students) {
     }
     return dojo;
 }
+//error because reassigning a const dojo of object to a string!
