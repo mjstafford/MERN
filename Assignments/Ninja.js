@@ -1,4 +1,4 @@
-class Ninja {
+export class Ninja {
     constructor(name, health, speed = 3, strength = 3) {
         this.name = name;
         this.health = health;
@@ -22,3 +22,5 @@ class Ninja {
 let ninja1 = new Ninja("george", 10, 5)
 
 ninja1.showStats()
+
+// export default Ninja
