@@ -29,6 +29,11 @@ class Sensei extends Ninja {
         super.drinkSake();
         console.log("What one programmer can do in one month, two programmers can do in two months.")
     }
+
+    //override to include the wisdom stat
+    showStats() {
+        console.log(`Name: ${this.name}\nStrength: ${this.strength}\nSpeed: ${this.speed}\nHealth: ${this.health}\nWisdom: ${this.wisdom}\n`)
+    }
 }
 
 // example output
