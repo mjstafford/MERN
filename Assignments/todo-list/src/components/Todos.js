@@ -14,6 +14,8 @@ const Todos = (props) => {
     }
 
     const toggleCompleteTodo = (index) => {
+        //Also could have done a map function and only toggle the completed state of the given index
+        //probably would have been the best way!
         let newTodo = {
             ...allTodos[index],
             completed: !allTodos[index].completed
