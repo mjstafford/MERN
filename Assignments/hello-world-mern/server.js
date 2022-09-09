@@ -1,9 +1,10 @@
 const express = require('express');
+//allows for cross-origin requests
+//such as api on localhost/8000 and react on localhost/3000
 const cors = require('cors')
 
-
 const app = express();
-require('./server/routes/person.routes')(app)
+app.use(cors())
 /*similar to doing: 
     function (app) {
         app.get('/api', PersonController.index);
@@ -11,9 +12,7 @@ require('./server/routes/person.routes')(app)
 
     //but we've abstracted it already
 */
-
-app.use(cors())
-
+require('./server/routes/person.routes')(app)
 
 const port = 8000;
 

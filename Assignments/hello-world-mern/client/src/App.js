@@ -1,7 +1,6 @@
-import Main from './components/Main';
 import './App.css';
-
-
+import React from 'react';
+import Main from './components/Main';
 
 function App() {
   return (
@@ -10,5 +9,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
+
