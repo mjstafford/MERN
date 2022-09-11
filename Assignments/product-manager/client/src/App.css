@@ -32,7 +32,80 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* my css */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20rem;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+form>div {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: grey;
+  padding: .4rem;
+  border-radius: 4px;
+}
+
+form input {
+  margin-left: 1rem;
+  padding: .4rem;
+  border-radius: 4px;
+}
+
+#products-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.product-link {
+  padding: 1rem;
+  gap: 1rem;
+}
+
+Link,
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+Link,
+a:hover {
+  color: blue;
+}
+
+#detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 20rem;
+  background-color: green;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 10rem
+}
+
+#detail-container p,
+#detail-container h1 {
+  color: rgb(237, 237, 12);
+}
+
+#detail-container b {
+  color: black;
 }

@@ -26,21 +26,20 @@ const ProductForm = () => {
 
     return (
         <form onSubmit={submitHandler}>
-            <p>
-                <label>Title
-                    <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} />
-                </label>
-            </p>
-            <p>
-                <label>Price
-                    <input type="number" step=".01" onChange={(e) => setPrice(e.target.value)} value={price} />
-                </label>
-            </p>
-            <p>
-                <label>Description
-                    <input type="text" onChange={(e) => setDescription(e.target.value)} value={description} />
-                </label>
-            </p>
+            <div>
+                <label htmlFor='title'>Title</label>
+                <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} id="title" />
+            </div>
+
+            <div>
+                <label htmlFor='price'>Price</label>
+                <input type="number" step=".01" onChange={(e) => setPrice(e.target.value)} value={price} id="price" />
+            </div>
+
+            <div>
+                <label htmlFor='description'>Description</label>
+                <input type="text" onChange={(e) => setDescription(e.target.value)} value={description} id='description' />
+            </div>
 
             <input type="submit" value="Create" />
         </form>
