@@ -22,16 +22,16 @@ export default (props) => {
         setProducts(products.filter(product => product._id != productId));
     }
 
-    //is there a good way to refresh page after new item is added?? TBD
-    // const addToDom = productId => {
-    //     setProducts(products.filter(product => product._id != productId));
-    // }
+    // is there a good way to refresh page after new item is added?? TBD
+    const addToDom = product => {
+        setProducts([...products, product]);
+    }
 
 
     return (
         <div>
             <h1>Project Manager</h1>
-            <ProductForm />
+            <ProductForm addToDom={addToDom} />
             <hr />
             {loaded && <ProductsList products={products} removeFromDom={removeFromDom} />}
         </div>
