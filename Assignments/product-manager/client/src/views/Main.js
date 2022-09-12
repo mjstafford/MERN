@@ -9,6 +9,7 @@ export default (props) => {
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
+        //This could be moved to a service folder
         axios.get('http://localhost:8000/api/products')
             .then(res => {
                 setProducts(res.data)
@@ -17,12 +18,22 @@ export default (props) => {
             .catch(err => console.log(err))
     }, [])
 
+    const removeFromDom = productId => {
+        setProducts(products.filter(product => product._id != productId));
+    }
+
+    //is there a good way to refresh page after new item is added?? TBD
+    // const addToDom = productId => {
+    //     setProducts(products.filter(product => product._id != productId));
+    // }
+
+
     return (
         <div>
             <h1>Project Manager</h1>
             <ProductForm />
             <hr />
-            {loaded && <ProductsList products={products} />}
+            {loaded && <ProductsList products={products} removeFromDom={removeFromDom} />}
         </div>
     )
 }

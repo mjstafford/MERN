@@ -109,3 +109,13 @@ a:hover {
 #detail-container b {
   color: black;
 }
+
+.edit-button {
+  background-color: #282c34;
+  border-radius: 5px;
+}
+
+.delete-button {
+  background-color: red;
+  border-radius: 5px;
+}
